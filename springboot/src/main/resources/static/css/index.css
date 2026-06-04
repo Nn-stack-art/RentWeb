@@ -1,0 +1,394 @@
+body {
+    padding-top: 56px; /* 为顶部状态栏留出空间 */
+    background-color: #f8f9fa;
+}
+
+/* 顶部状态栏 */
+.navbar-top {
+    height: 56px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* 侧边栏导航 */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,.1);
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 12px 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #e9ecef;
+    border-left: 3px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 主内容区域 */
+.main-content {
+    margin-left: 250px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* 用户信息 */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #667eea;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 登录按钮样式 */
+.btn-login {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-login:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* 房源筛选表单 */
+#houseFilterForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* 筛选结果区域 */
+#filterResults {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* 房源卡片样式 */
+.house-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.house-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.house-card-body {
+    padding: 15px;
+}
+
+.house-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    
+    .sidebar .nav-link span {
+        display: none;
+    }
+    
+    .sidebar .nav-link i {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    
+    /* 在小屏幕上调整筛选表单 */
+    #houseFilterForm .col-md-6 {
+        margin-bottom: 15px;
+    }
+}
+     /* 卡片 hover 效果优化 */
+ .collection-card {
+     transition: all 0.3s ease;
+     border: none;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 卡片图片样式优化 */
+.collection-card-img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 卡片内容区域 */
+.collection-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+/* 房源标题样式 */
+.collection-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 房源信息样式 */
+.collection-card-info {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+.collection-card-info i {
+    width: 16px;
+    margin-right: 4px;
+    color: #868e96;
+}
+
+/* 价格样式（突出显示） */
+.collection-card-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 12px;
+}
+
+/* 按钮区域样式 */
+.collection-card-actions {
+    margin-top: auto; /* 按钮区域靠底 */
+    display: flex;
+    gap: 8px;
+}
+
+/* 按钮样式优化 */
+.collection-btn-detail {
+    flex: 1;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.2s;
+}
+.collection-btn-detail:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+.collection-btn-cancel {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border-color: #dee2e6;
+    transition: all 0.2s;
+}
+.collection-btn-cancel:hover {
+    background-color: #f1f3f5;
+    color: #bb2d3b;
+    border-color: #adb5bd;
+}
+
+/* 响应式适配（移动端优化） */
+@media (max-width: 768px) {
+    .collection-card-img {
+        height: 150px;
+    }
+    .collection-card-title {
+        font-size: 16px;
+    }
+    .collection-card-price {
+        font-size: 18px;
+    }
+    .collection-btn-detail, .collection-btn-cancel {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+}
+/* ========== 数据解析页面专属样式（避免冲突） ========== */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    min-height: calc(100vh - 96px);
+}
+
+#data-analysis .card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+#data-analysis .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#data-analysis .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 12px 20px;
+}
+
+#data-analysis .card-body {
+    padding: 20px;
+}
+
+/* 仅保留柱状图/饼图样式 */
+#barChart, #pieChart {
+    width: 100% !important;
+    height: 400px !important;
+    min-height: 300px;
+    display: block;
+}
+
+/* 新增百度地图容器样式 */
+#baiduMap {
+    width: 100% !important;
+    height: 400px !important;
+    min-height: 300px;
+    border-radius: 4px;
+    visibility: visible;
+    display: block;
+}
+
+/* 筛选栏样式 */
+#data-analysis .form-select.w-auto {
+    min-width: 150px;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+#data-analysis .btn-outline-primary {
+    border-radius: 6px;
+    padding: 6px 16px;
+}
+
+/* 响应式适配 */
+@media (max-width: 992px) {
+    #data-analysis .row.g-4 > div {
+        margin-bottom: 20px;
+    }
+    #barChart, #pieChart {
+        height: 300px !important;
+    }
+    #baiduMap {
+        height: 350px !important;
+        visibility: visible;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #data-analysis .content-section {
+        padding: 15px;
+    }
+    #data-analysis .d-flex.flex-wrap {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start !important;
+    }
+    #barChart, #pieChart {
+        height: 250px !important;
+    }
+    #baiduMap {
+        height: 300px !important;
+        visibility: visible;
+        display: block;
+    }
+}
+
+/* 数据说明提示框 */
+#data-analysis .alert-light {
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* 主内容区间距修复（仅关联数据解析显示） */
+.main-content {
+    padding: 20px 20px 40px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 70px;
+        padding: 15px 15px 30px;
+    }
+}
+/* 给图表容器加明确尺寸 */
+#barChart, #pieChart {
+    width: 100%; /* 占满父容器宽度 */
+    height: 400px; /* 固定高度，避免被压缩 */
+    min-height: 350px; /* 最小高度兜底 */
+    display: block;
+    visibility: visible;
+}
+
+/* 父容器也要有宽高（如果是卡片布局） */
+.chart-card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}

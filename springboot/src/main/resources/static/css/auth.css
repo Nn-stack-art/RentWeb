@@ -1,0 +1,153 @@
+/* 全屏背景图片 */
+body {
+    background: url('../imgs/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 登录卡片样式 */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 0 15px;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* 卡片悬浮放大效果 */
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 登录标题样式 */
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.login-title i {
+    color: #667eea;
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+/* 输入框组样式 */
+.input-group {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text {
+    background-color: #f5f7ff;
+    border: none;
+    color: #667eea;
+    width: 45px;
+    justify-content: center;
+}
+
+.form-control {
+    border: none;
+    padding: 14px 15px;
+    font-size: 15px;
+}
+
+/* 输入框聚焦样式 */
+.form-control:focus {
+    box-shadow: none;
+    border-color: #667eea;
+    background-color: #f9faff;
+}
+
+/* 错误提示样式 */
+.error-msg {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgba(220, 53, 69, 0.1);
+    font-size: 14px;
+}
+
+/* 成功提示样式 */
+.success-msg {
+    color: #198754;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgba(25, 135, 84, 0.1);
+    font-size: 14px;
+}
+
+/* 登录/注册按钮样式 */
+.btn-submit {
+    background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%); /* 橙色渐变 */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* 底部备注样式 */
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 13px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* 切换链接样式 */
+.switch-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* 隐藏注册表单 */
+#registerForm {
+    display: none;
+}

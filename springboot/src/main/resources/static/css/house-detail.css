@@ -1,0 +1,133 @@
+/* 全局样式 */
+body {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 详情页容器 */
+.house-detail-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1200px; /* 限制最大宽度，避免大屏拉伸 */
+}
+
+/* 房源标题 */
+.house-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* 核心元数据（地区、房型等） */
+.house-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* 增加间距，更宽松 */
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+}
+
+.meta-item i {
+    color: #2563eb;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* 价格样式 */
+.house-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #dc2626;
+    margin: 15px 0;
+}
+
+/* 详细信息表格 */
+.house-info {
+    margin-bottom: 30px;
+}
+
+.house-label {
+    font-weight: 500;
+    color: #2d3748;
+    width: 120px;
+    display: inline-block;
+}
+
+.house-value {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* 按钮样式（重点优化） */
+.btn-group {
+    text-align: right; /* 按钮右对齐，更美观 */
+    margin-top: 20px;
+}
+
+/* 返回按钮：蓝色系（沉稳） */
+.back-btn {
+    background-color: #165dff; /* 调整为更柔和的蓝色 */
+    border-color: #165dff;
+    color: #fff !important;
+    padding: 8px 20px;
+    margin-right: 10px; /* 与收藏按钮间距 */
+    border-radius: 6px;
+}
+
+.back-btn:hover {
+    background-color: #0d47a1;
+    border-color: #0d47a1;
+}
+
+/* 收藏按钮：红色系（醒目） */
+.collect-btn {
+    background-color: #ef4444; /* 调整为更鲜艳的红色，突出收藏功能 */
+    border-color: #ef4444;
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.collect-btn:hover {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+/* 适配移动端（响应式） */
+@media (max-width: 768px) {
+    .house-detail-container {
+        padding: 20px;
+    }
+
+    .house-meta {
+        gap: 15px;
+    }
+
+    .house-price {
+        font-size: 28px;
+    }
+
+    .btn-group {
+        text-align: center; /* 移动端按钮居中 */
+    }
+
+    .back-btn, .collect-btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 10px 0; /* 垂直排列 */
+    }
+}

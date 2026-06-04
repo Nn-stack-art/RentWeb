@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  application:
+    #应用的名称，可选
+    name: lianjia_rent
+  # 数据源配置
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: "jdbc:mysql://localhost:3306/lianjia_rent?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true"
+      username: root
+      password:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/lianjia_rent  # 数据库名：lianjia_rent（爬虫配置的）
+  thymeleaf:
+    prefix: classpath:/templates/  # 模板文件路径
+    suffix: .html                  # 模板文件后缀
+    mode: HTML5                    # 模板模式
+    encoding: UTF-8                # 编码
+    cache: false                   # 开发环境关闭缓存（修改后无需重启）
+# MyBatis Plus配置
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    # SQL语句等日志信息输出在控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+baidu:
+  map:
+    ak: WtHVYsMMiGhr05j9Wyk6PkXP12O09UaW
